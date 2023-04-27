@@ -160,7 +160,7 @@ function kosarMegjelenit() {
 }
 
 /*Darabok növelése és csökkenése */
-function gombok(list) {
+function gombok() {
     const BALELEM = $(".bal");
     const JOBBELEM = $(".jobb");
 

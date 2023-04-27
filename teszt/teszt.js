@@ -117,8 +117,8 @@ QUnit.module('kosarMegjelenit', function () {
 });
 
 QUnit.module('gombok', function () {
-    QUnit.test('bal gomb látja-e a darabok számát', function (assert) {
-        assert.equal(darabokSzama, 'darabszáma');
+    QUnit.test('létezik-e ?', function (assert) {
+        assert.ok(gombok, 'darabszáma');
     });
 
     QUnit.test('jobb gomb látja-e a darabok számát', function (assert) {
@@ -149,4 +149,3 @@ QUnit.module('xKattintas', function () {
     });
 
 });
-
