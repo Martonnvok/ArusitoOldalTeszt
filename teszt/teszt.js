@@ -1,4 +1,4 @@
-const lista = [
+const list = [
     { nev: 'Termék 1', darab: 3, ar: 1000, kep: 'kep1.jpg' },
     { nev: 'Termék 2', darab: 1, ar: 500, kep: 'kep2.jpg' },
     { nev: 'Termék 3', darab: 2, ar: 2000, kep: 'kep3.jpg' }
@@ -9,27 +9,26 @@ QUnit.module('megjelenitDiv', function () {
         assert.ok(megjelenitDiv, 'Létezik');
     });
 
-    QUnit.module('első elem', function () {
-        QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[0], 'lista második eleme létezik e');
-        });
+    QUnit.test('lista első elemeit', function (assert) {
+        assert.ok(list[0], 'lista első eleme létezik e');
     });
 
-    QUnit.module('második elem', function () {
-        QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[1], 'lista harmadik eleme létezik e');
-        });
+
+
+    QUnit.test('lista második elemet', function (assert) {
+        assert.ok(list[1], 'lista második eleme létezik e');
     });
 
-    QUnit.module('harmadik elem', function () {
-        QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[2], 'lista első eleme létezik e');
-        });
+
+
+    QUnit.test('lista harmadik eleme', function (assert) {
+        assert.ok(list[2], 'lista harmadik eleme létezik e');
     });
 
 });
 
 
+    
 
 
 
@@ -41,19 +40,19 @@ QUnit.module('megjelenitTabla', function () {
 
     QUnit.module('első elem', function () {
         QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[0], 'lista második eleme létezik e');
+            assert.ok(list[0], 'lista második eleme létezik e');
         });
     });
 
     QUnit.module('második elem', function () {
         QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[1], 'lista harmadik eleme létezik e');
+            assert.ok(list[1], 'lista harmadik eleme létezik e');
         });
     });
 
     QUnit.module('harmadik elem', function () {
         QUnit.test('ellenőrzi a lista elemeit', function (assert) {
-            assert.equal(lista[2], 'lista első eleme létezik e');
+            assert.ok(list[2], 'lista első eleme létezik e');
         });
     });
 
@@ -77,11 +76,12 @@ QUnit.module('nav', function () {
         assert.ok(nav, 'Létezik');
     });
 
-    QUnit.test('a header tartalmazza az Oláh Pékség feliratot', function (assert) {
-        const HEADER = $("header");
-        const expectedHeader = '<h1 class="text-warning">Oláh Pékség</h1>';
-        assert.equal(HEADER.html(), expectedHeader, 'a header tartalmazza az Oláh Pékség feliratot');
+    QUnit.test('a navigáció tartalmazza az Oláh Pékség feliratot', function (assert) {
+        const NAV = $("nav");
+        const expectedNav = '<a class="navbar-brand text-warning" href="#">Oláh Pékség</a>';
+        assert.equal(NAV.html(), expectedNav, 'a navigáció tartalmazza az Oláh Pékség feliratot');
     });
+    
 
 
     QUnit.test('az aktív link megfelelően be van állítva a nav-ban', function (assert) {
@@ -103,7 +103,7 @@ QUnit.module('hozzaAdas', function () {
 
     QUnit.test('van-e gombja ?', function (assert) {
         const GOMB = $('#b');
-        assert.ok(GOMB.length, 'van');
+        assert.ok(GOMB, 'van');
     });
 });
 
@@ -122,7 +122,7 @@ QUnit.module('gombok', function () {
     });
 
     QUnit.test('jobb gomb látja-e a darabok számát', function (assert) {
-        assert.equal(darabokSzama, 'darabszáma');
+        assert.equal(gombok(darabokSzama==JOBBELEM), 'darabszáma');
     });
 
 

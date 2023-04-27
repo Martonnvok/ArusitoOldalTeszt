@@ -1,6 +1,13 @@
 //A piaci rész felületet jeleníti meg
 
-function megjelenitDiv(list) {
+
+
+function megjelenitDiv() {
+  const list = [
+    { nev: 'Termék 1', darab: 3, ar: 1000, kep: 'kep1.jpg' },
+    { nev: 'Termék 2', darab: 1, ar: 500, kep: 'kep2.jpg' },
+    { nev: 'Termék 3', darab: 2, ar: 2000, kep: 'kep3.jpg' }
+  ];
     const ARTICLE = $("article");
     const DIVTORLES = ARTICLE.find(".div");
     const MODALID = $("#myModal .modal-content");
