@@ -1,0 +1,60 @@
+/*Alap betűszínek és stílus*/
+body{
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-seri;
+    font-size: 20px;
+    margin: 0px;
+}
+h1{
+    padding: 15px;
+    text-align: center;
+}
+
+
+nav{
+    margin: 10px;
+}
+
+article{
+    margin: 20px;
+}
+
+aside{
+    margin: 20px;
+}
+
+
+div{
+    /*Flexes elhelyezkedések*/
+    /*
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    */
+
+    /*Keret*/
+    border: 1px solid gray;
+    
+    margin: 5px;
+    padding: 5px;
+}
+
+.semmi{
+    border: 0px;
+    margin: 5px;
+    padding: 5px;
+}
+
+ul{
+   list-style-type: none;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+button{
+    margin: 5px;
+}
