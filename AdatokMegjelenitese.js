@@ -6,7 +6,7 @@ export function megjelenitDiv(list) {
   const MODALID = $("#myModal .modal-content");
   DIVTORLES.remove();
 
-  
+
 
   let htmlkod = `<div class="semmi row bg-secondary p-3"> `;
   for (let index = 0; index < list.length; index++) {
@@ -23,37 +23,10 @@ export function megjelenitDiv(list) {
       ;
   }
 
-  /*
-  const KOSARAK = $(".class2");
-  KOSARAK.on("click", function(event) {
-    let id = event.target.id.substring(3);
-    let bruh = `
-      <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">${list[id].nev}</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-              <p>${list[id].leiras}</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezárás</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    MODALID.html(bruh);
-  });
-*/
+
   ARTICLE.html(htmlkod);
-  
+
 }
-
-
-//Az admin, weblap elejét jeleníti meg
 
 export function megjelenitTabla(adatok) {
 
@@ -89,11 +62,10 @@ export function megjelenitTabla(adatok) {
   `;
   ARTICLE.html(htmlkod);
 
-  xKattintas(adatok); // hívjuk meg az xKattintas függvényt a megfelelő paraméterekkel
+  xKattintas(adatok);
+
 }
 
-
-//Navigáció, oldal linkek
 export function nav() {
   const HEADER = $("header");
   let header = "";
@@ -174,7 +146,7 @@ export function hozzaAdas(adatok) {
   });
 }
 
-//kosár megjelenítése
+
 export function kosarMegjelenit() {
   const ASIDE = $("aside");
   let aside = `
@@ -185,6 +157,7 @@ export function kosarMegjelenit() {
     `;
   ASIDE.append(aside);
 
-  
+
 }
+
 
